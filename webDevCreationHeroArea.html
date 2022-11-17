@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            width: 100%;
+            height: 60vh;
+            /* box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0; */
+            background-image: url(dropdown1.jpg);
+            height:100vh;
+            background-size:cover;
+            background-position: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            width: 140px;
+            height: 60px;
+            float: left;
+            font-size: 20px;
+            line-height: 60px;
+            text-align: center;
+            /* border:1px solid blue; */
+        }
+
+        ul li a {
+            text-decoration: none;
+            /* display:block; */
+            display: block;
+            color: rgb(235, 245, 237);
+            transition: 0.6s ease;
+        }
+
+        ul li a:hover {
+            color: rgb(11, 72, 214);
+            background-color: rgb(42, 2, 2);
+        }
+
+        ul li ul li {
+            display: none;
+            /* used here to make dropdown invisible*/
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+            height: 60px;
+            transition: 0.6s ease;
+        }
+
+        ul li:hover ul li {
+            display: inline-block;
+            /* used here to make sub ul li visible benefit of inline-block over block is we can give width */
+            animation: drop 1s ease;
+        }
+        @keyframes drop {
+            0% {
+                transform: scale(2, 2) rotatex(90deg);
+            }
+            100%{
+                transform: scale(1,1) rotatex(0deg);
+            }
+        }
+        nav ul .class{
+            text-decoration: none;
+        }
+        h1{
+            text-align: center;
+            font-size: 40px;
+            padding: 260px 95px;
+            color:rgb(239, 239, 95);
+        }
+        .buttom{
+           position:absolute;
+           top:60%;
+           left:50%;
+           text-align:center;
+           transform: translate(-50%, -50%);
+        }
+        .btn{
+            font-size:22px;
+            border:1px solid white;
+            color:rgb(225, 157, 11);
+            padding:10px 45px;
+            text-decoration:none;
+        }
+        .btn:hover{
+
+            background-color: white;
+            color:black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Web Dev</a></li>
+                    <li><a href="#">Android Dev</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Contant Writing</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Watch</a></li>
+            <div class="class">
+                <h1>WEB CREATION</h1>
+            </div>
+            <div class="buttom">
+                <a href="#" class ="btn">Subscribe</a>
+                <a href="#" class ="btn">Share</a>
+            </div>
+        </ul>
+    </div>
+    
+</body>
+
+</html>
